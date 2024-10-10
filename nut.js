@@ -32,7 +32,7 @@ async function generateForecast() {
     formData.append('file', fileInput);
 
     try {
-        const response = await fetch("http://localhost:8000/upload_csv", {
+        const response = await fetch("https://deploy-fastapi.vercel.app/upload_csv", {
             method: 'POST',
             body: formData
         });
