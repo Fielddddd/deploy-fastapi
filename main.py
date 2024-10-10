@@ -21,6 +21,10 @@ app.add_middleware(
 # URL ของโมเดลที่ deploy
 MODEL_URL = "http://54.91.48.234:5000/train"  # เปลี่ยนเป็น URL ของโมเดลคุณ
 
+@app.get("/")
+async def root():
+    return {"message": "Hello from FastAPI on Vercel"}
+
 # เส้นทางใหม่ /api ตอบกลับ "OK"
 @app.get("/api")
 async def get_api():
